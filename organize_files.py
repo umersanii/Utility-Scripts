@@ -33,7 +33,7 @@ def organize_desktop():
                 target_folder = os.path.join(desktop_path, 'Documents')
             elif item.endswith(('.mp4', '.avi', '.mkv')):
                 target_folder = os.path.join(desktop_path, 'Video')
-            elif item.endswith(('.jpg', '.png', '.gif', '.ico', '.jpeg', '.webp')):
+            elif item.endswith(('.jpeg', '.jpg', '.png', '.gif', '.ico', '.jpeg', '.webp')):
                 target_folder = os.path.join(desktop_path, 'Other Media')
             elif item.endswith(('.asm', '.cpp', '.h','.asm')):
                 target_folder = os.path.join(desktop_path, 'Code')
@@ -94,7 +94,7 @@ def organize_downloads():
                 target_folder = os.path.join(desktop_path, 'Video')
             elif item.endswith(('.py', '.cpp', '.h','.asm', '.md', '.css')):
                 target_folder = os.path.join(desktop_path, 'Code')
-            elif item.endswith(('.jpg', '.png', '.gif', '.ico', '.jpeg')):
+            elif item.endswith(('.jpg', '.jpeg', '.png', '.gif', '.ico', '.jpeg')):
                 target_folder = os.path.join(desktop_path, 'Other Media')
             elif item.endswith(('.mp3', 'wav')):
                 target_folder = os.path.join(desktop_path, 'Audio')
