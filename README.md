@@ -5,8 +5,6 @@ The "organize_files.py" script tidies up your desktop and downloads folder by au
 
 ### Keep PC Awake Script:
 Execute the "keep_awake.py" script to prevent your computer from sleeping during crucial tasks. Ideal for presentations or lengthy downloads, this script ensures your PC stays active without manual intervention, maintaining uninterrupted operation.
-One Paragraph of the project description
-
 
 ## Prerequisites
 
