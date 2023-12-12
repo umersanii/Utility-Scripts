@@ -94,13 +94,13 @@ def organize_downloads():
                 target_folder = os.path.join(desktop_path, 'Video')
             elif item.endswith(('.py', '.cpp', '.h','.asm', '.md', '.css')):
                 target_folder = os.path.join(desktop_path, 'Code')
-            elif item.endswith(('.jpg', '.jpeg', '.png', '.gif', '.ico', '.jpeg')):
+            elif item.endswith(('.jpg', '.jpeg', '.png', '.gif', '.ico', '.jpeg', '.webp')):
                 target_folder = os.path.join(desktop_path, 'Other Media')
             elif item.endswith(('.mp3', 'wav')):
                 target_folder = os.path.join(desktop_path, 'Audio')
             elif item.endswith(('.exe')):
                 target_folder = os.path.join(desktop_path, 'Executables')
-            elif item.endswith(( ".rar", ".7z")):
+            elif item.endswith(( ".rar", ".7z", ".zip")):
                 target_folder = os.path.join(desktop_path, 'Zip')
             elif item.endswith(( ".torrent")):
                 target_folder = os.path.join(desktop_path, 'Torrent')
