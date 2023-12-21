@@ -29,7 +29,7 @@ def organize_desktop():
         if os.path.isfile(item_path):
             if item.endswith(('.lnk', '.url')):
                 continue
-            if item.endswith(('.txt', '.pdf', '.docx', ".rar")):
+            if item.endswith(('.txt', '.pdf', '.docx', ".rar", '.xlsx')):
                 target_folder = os.path.join(desktop_path, 'Documents')
             elif item.endswith(('.mp4', '.avi', '.mkv')):
                 target_folder = os.path.join(desktop_path, 'Video')
@@ -88,7 +88,7 @@ def organize_downloads():
         if os.path.isfile(item_path):
             if item.endswith(('.lnk', '.url')):
                 continue
-            if item.endswith(('.txt', '.pdf', '.docx', '.odt')):
+            if item.endswith(('.txt', '.pdf', '.docx', '.odt', '.xlsx')):
                 target_folder = os.path.join(desktop_path, 'Documents')
             elif item.endswith(('.mp4', '.avi', '.mkv')):
                 target_folder = os.path.join(desktop_path, 'Video')
