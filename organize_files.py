@@ -101,7 +101,7 @@ def organize_downloads():
             elif item.endswith(('.exe')):
                 target_folder = os.path.join(desktop_path, 'Executables')
             elif item.endswith(( ".rar", ".7z", ".zip")):
-                target_folder = os.path.join(desktop_path, 'Zip')
+                target_folder = os.path.join(desktop_path, 'Zips')
             elif item.endswith(( ".torrent")):
                 target_folder = os.path.join(desktop_path, 'Torrent')
             else:
