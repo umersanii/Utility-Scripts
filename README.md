@@ -16,3 +16,6 @@ Requirements for the software and other tools to build, test and push
 
   - [Umer Sani](https://github.com/umersanii)
 
+### Scrum Master Script:
+A small helper that collects your GitHub commits and PRs from the last 24 hours, summarizes them via Groq, and prints a concise daily scrum briefing to the terminal. See the script README for setup and usage: [scrum-master/README.md](scrum-master/README.md)
+
