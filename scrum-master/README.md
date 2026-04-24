@@ -31,6 +31,9 @@ Setup
 - `REPOS` — comma-separated list of repositories (e.g. `org/repo1,org/repo2`)
 - `SCHEDULE` — optional default schedule string (e.g. `3:00 pm - 8:00 pm`)
 - `CC` — optional CC text to show in output
+- `SLACK_CHANNEL` — optional channel to post into (e.g. `#daily-scrum`)
+- `SLACK_USER_TOKEN` — optional user OAuth token (`xoxp-...`) to post as your profile
+- `SLACK_BOT_TOKEN` — optional bot token (`xoxb-...`) fallback if user token is not set
 
 Example `.env`:
 
@@ -41,19 +44,32 @@ GROQ_API_KEY=groq_...
 REPOS=beetleOps/edgevision_mobile,beetleOps/EdgeVision_Core
 SCHEDULE=3:00 pm - 8:00 pm
 CC=@YourManager
+SLACK_CHANNEL=#daily-scrum
+SLACK_USER_TOKEN=xoxp_...
+SLACK_BOT_TOKEN=xoxb_...
 ```
+
+Slack posting behavior
+----------------------
+- If `SLACK_USER_TOKEN` is set, posts are sent as your Slack user profile.
+- Otherwise, if `SLACK_BOT_TOKEN` is set, posts are sent as the app bot.
 
 Usage
 -----
 Make the script executable or run with Python:
 
-```
-./scrum_master
-python3 scrum_master
+```bash
+./scrum_master.py
 ```
 
-Flags:
+### Signing In
+To announce your arrival and start the work timer:
 
+```bash
+./signin.py
+```
+
+### Flags for scrum_master.py:
 - `--eta`  : Prompts you to pick an arrival time slot (adjusts schedule)
 - `--focus`: Prompts for "Today's Focus & Next Steps" instead of auto-generating it
 
@@ -72,6 +88,7 @@ Notes & Troubleshooting
 Files
 -----
 - [scrum_master](scrum_master) — main script
+- [signin.py](signin.py) — script to post 'Signing in' to Slack and start Quickshell timer
 
 License
 -------
