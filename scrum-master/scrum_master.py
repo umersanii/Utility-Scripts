@@ -32,7 +32,7 @@ from urllib3.util.retry import Retry
 
 try:
     from dotenv import load_dotenv
-    load_dotenv(Path(__file__).resolve().parent / ".env")
+    load_dotenv(Path(__file__).resolve().parent / ".env", override=True)
 except ImportError:
     pass
 
