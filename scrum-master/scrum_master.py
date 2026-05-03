@@ -58,6 +58,31 @@ def load_config():
     }
 
 
+def validate_credentials(config):
+    github_token = config["github_token"]
+    groq_key = config["groq_key"]
+
+    if github_token.startswith("gsk_") and groq_key.startswith("gh"):
+        sys.exit(
+            "Error: credentials look swapped.\n"
+            "- GITHUB_TOKEN appears to be a Groq key (starts with 'gsk_')\n"
+            "- GROQ_API_KEY appears to be a GitHub token (starts with 'gh')\n"
+            "Please swap these values in your .env and run again."
+        )
+
+    if github_token.startswith("gsk_"):
+        sys.exit(
+            "Error: GITHUB_TOKEN looks invalid (starts with 'gsk_'). "
+            "Use a GitHub personal access token (typically starts with 'gh')."
+        )
+
+    if groq_key.startswith("gh"):
+        sys.exit(
+            "Error: GROQ_API_KEY looks invalid (starts with 'gh'). "
+            "Use a Groq API key (starts with 'gsk_')."
+        )
+
+
 # -----------------------------------------------
 # PROMPTS
 # -----------------------------------------------
@@ -65,7 +90,7 @@ _RULES = (
     "Rules:\n"
     "- Rewrite raw commit messages as plain English "
     "(e.g. 'fix: auth token null check' -> 'Fixed null token crash in auth')\n"
-    "- Section 1 must have 6-8 bullets — group minor related commits into one bullet if there are too many\n"
+    "- Section 1 must have 4-5 bullets — group minor related commits into one bullet if there are too many\n"
     "- Do NOT include repo names or commit SHAs in bullets\n"
     "- Do NOT add extra sections, headers, or closing remarks\n"
     "- Output plain text only, no markdown bold or italics"
@@ -252,6 +277,7 @@ def collect_activity(config, target_date=None):
     token = config["github_token"]
     username = config["github_username"]
     activity = []
+    auth_failures = 0
     session = build_retry_session()
     try:
         for repo in config["repos"]:
@@ -260,9 +286,20 @@ def collect_activity(config, target_date=None):
                 activity += fetch_commits(repo, username, token, since, session, until)
                 activity += fetch_pull_requests(repo, username, token, since, session, until)
             except requests.RequestException as e:
+                status_code = getattr(getattr(e, "response", None), "status_code", None)
+                if status_code == 401:
+                    auth_failures += 1
                 print(f"  Warning: could not fetch {repo}: {e}")
     finally:
         session.close()
+
+    if config["repos"] and auth_failures == len(config["repos"]):
+        sys.exit(
+            "Error: GitHub authentication failed for all configured repos (401 Unauthorized).\n"
+            "Check GITHUB_TOKEN in your .env and verify it has access to these private repos.\n"
+            "Required access usually includes repository read access (Contents and Pull requests)."
+        )
+
     return activity, window_label
 
 
@@ -416,6 +453,8 @@ def main():
         sys.exit(f"Error: missing required env vars: {', '.join(missing)}\n"
                  f"Set them in .env or export them before running.")
 
+    validate_credentials(config)
+
     print("Collecting GitHub activity...")
     activity, activity_window = collect_activity(config, target_date=args.date)
     print(f"  Found {len(activity)} item(s).\n")
@@ -424,7 +463,16 @@ def main():
     prompt = PROMPT_NO_FOCUS if args.focus else PROMPT_FULL
 
     print("Summarising with Groq...")
-    summary = summarise(activity_text, prompt, config, activity_window_label=activity_window)
+    try:
+        summary = summarise(activity_text, prompt, config, activity_window_label=activity_window)
+    except Exception as e:
+        error_text = str(e)
+        if "invalid_api_key" in error_text.lower() or "authentication" in error_text.lower():
+            sys.exit(
+                "Error: Groq authentication failed. "
+                "Check GROQ_API_KEY in your .env (it should start with 'gsk_')."
+            )
+        raise
 
     if args.focus:
         print()
