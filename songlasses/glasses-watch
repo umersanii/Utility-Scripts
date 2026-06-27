@@ -9,6 +9,8 @@
 set INTERVAL 300   # seconds between checks (5 min)
 set strike 0
 set first_run 1
+set DIR (dirname (readlink -f (status filename)))
+set IMG_SON $DIR/no-glasses.png
 
 while true
     # cheat code: songlasses command resets streak and skips this cycle
@@ -30,10 +32,12 @@ while true
             switch $strike
                 case 1
                     notify-send -a "glasses-check" -t 6000 \
+                        -h "string:image-path:$IMG_SON" \
                         "Glasses reminder" "Heads up — you forgot your glasses!"
 
                 case 2
                     notify-send -u critical -a "glasses-check" -t 0 \
+                        -h "string:image-path:$IMG_SON" \
                         "Still no glasses!" "You've been without glasses for 10 minutes."
 
                 case '*'

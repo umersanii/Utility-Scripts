@@ -18,8 +18,8 @@ MODEL    = "meta-llama/llama-4-scout-17b-16e-instruct"
 def capture_frame(path):
     result = subprocess.run(
         ["ffmpeg", "-y", "-loglevel", "error",
-         "-f", "v4l2", "-i", CAMERA,
-         "-vframes", "1", "-q:v", "5", path],
+         "-f", "v4l2", "-input_format", "mjpeg", "-video_size", "320x240",
+         "-i", CAMERA, "-vframes", "1", "-q:v", "5", path],
         capture_output=True,
     )
     if result.returncode != 0:
