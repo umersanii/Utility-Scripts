@@ -163,10 +163,20 @@ def gh_headers(token):
     }
 
 
+def last_working_day(n=1):
+    """Return the date that is n working days before today (UTC)."""
+    d = datetime.now(timezone.utc).date()
+    count = 0
+    while count < n:
+        d -= timedelta(days=1)
+        if d.weekday() < 5:  # Mon=0..Fri=4
+            count += 1
+    return d
+
+
 def since_timestamp():
     now = datetime.now(timezone.utc)
-    lookback = timedelta(days=3) if now.weekday() == 0 else timedelta(hours=24)
-    return (now - lookback).isoformat()
+    return (now - timedelta(hours=24)).isoformat()
 
 
 def specific_date_window(target_date):
@@ -177,15 +187,23 @@ def specific_date_window(target_date):
 
 def get_branches(repo, token, session):
     url = f"https://api.github.com/repos/{repo}/branches"
-    resp = session.get(
-        url,
-        headers=gh_headers(token),
-        params={"per_page": 100},
-        timeout=REQUEST_TIMEOUT_SECONDS,
-    )
-    if resp.status_code != 200:
-        return ["main"]
-    return [b["name"] for b in resp.json()]
+    branches = []
+    page = 1
+    while True:
+        resp = session.get(
+            url,
+            headers=gh_headers(token),
+            params={"per_page": 100, "page": page},
+            timeout=REQUEST_TIMEOUT_SECONDS,
+        )
+        if resp.status_code != 200:
+            return branches or ["main"]
+        data = resp.json()
+        branches.extend(b["name"] for b in data)
+        if len(data) < 100:
+            break
+        page += 1
+    return branches or ["main"]
 
 
 def fetch_commits(repo, username, token, since, session, until=None):
@@ -269,6 +287,10 @@ def collect_activity(config, target_date=None):
     if target_date:
         since, until = specific_date_window(target_date)
         window_label = target_date.strftime("%Y-%m-%d")
+    elif datetime.now(timezone.utc).weekday() == 0:  # Monday -> use last working day (Friday)
+        lwd = last_working_day(1)
+        since, until = specific_date_window(lwd)
+        window_label = lwd.strftime("%Y-%m-%d")
     else:
         since = since_timestamp()
         until = None
@@ -419,6 +441,8 @@ def parse_args():
             "  slack_committer --eta            prompt for arrival/schedule time\n"
             "  slack_committer --focus          prompt for Today's Focus (AI does sections 1-2)\n"
             "  slack_committer --date 2026-04-15  fetch activity for a specific date\n"
+            "  slack_committer --last 1           fetch activity for most recent working day\n"
+            "  slack_committer --last 2           fetch activity for 2 working days ago\n"
             "  slack_committer --eta --focus    prompt for both\n"
         ),
     )
@@ -435,6 +459,12 @@ def parse_args():
         type=parse_cli_date,
         metavar="YYYY-MM-DD",
         help="fetch GitHub activity for a specific UTC date",
+    )
+    parser.add_argument(
+        "--last",
+        type=int,
+        metavar="N",
+        help="fetch GitHub activity for the Nth-last working day (e.g. --last 1 for most recent working day, --last 2 for the one before that)",
     )
     return parser.parse_args()
 
@@ -455,8 +485,17 @@ def main():
 
     validate_credentials(config)
 
+    if args.date and args.last is not None:
+        sys.exit("Error: --date and --last are mutually exclusive.")
+    if args.last is not None:
+        if args.last < 1:
+            sys.exit("Error: --last must be a positive integer.")
+        target_date = last_working_day(args.last)
+    else:
+        target_date = args.date
+
     print("Collecting GitHub activity...")
-    activity, activity_window = collect_activity(config, target_date=args.date)
+    activity, activity_window = collect_activity(config, target_date=target_date)
     print(f"  Found {len(activity)} item(s).\n")
     activity_text = format_activity(activity, window_label=activity_window)
 
@@ -500,7 +539,7 @@ def main():
                 break
             print(f"  Enter a number between 1 and {len(slots)}.")
 
-    today = get_scrum_display_date(target_date=args.date)
+    today = get_scrum_display_date(target_date=target_date)
     print(f"\n{'='*50}")
     print(f"Daily Scrum -- {today}")
     print('='*50)
@@ -517,7 +556,7 @@ def main():
                     config,
                     schedule=schedule,
                     cc=config["cc"],
-                    display_date=args.date,
+                    display_date=target_date,
                 )
                 print(f"Posted to Slack channel: {config.get('slack_channel')}")
             except (requests.RequestException, RuntimeError, ValueError) as e:

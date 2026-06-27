@@ -1,0 +1,57 @@
+#!/usr/bin/env fish
+# glasses-watch: escalating glasses reminder loop
+#
+# Strike 1  ( 5 min): gentle notify-send
+# Strike 2  (10 min): critical notify-send (persistent)
+# Strike 3+ (15 min): fullscreen image overlay via mpv
+# NO FACE DETECTED:   ignored — no alert, no streak change
+
+set INTERVAL 300   # seconds between checks (5 min)
+set strike 0
+set first_run 1
+
+while true
+    # cheat code: songlasses command resets streak and skips this cycle
+    if test -f /tmp/glasses-cheat
+        rm /tmp/glasses-cheat
+        set strike 0
+        set first_run 0
+        sleep $INTERVAL
+        continue
+    end
+
+    set output (glasses-check --quiet 2>/dev/null)
+    set status_line (echo $output | tail -1)
+
+    switch $status_line
+        case "NO GLASSES"
+            set strike (math $strike + 1)
+
+            switch $strike
+                case 1
+                    notify-send -a "glasses-check" -t 6000 \
+                        "Glasses reminder" "Heads up — you forgot your glasses!"
+
+                case 2
+                    notify-send -u critical -a "glasses-check" -t 0 \
+                        "Still no glasses!" "You've been without glasses for 10 minutes."
+
+                case '*'
+                    glasses-alert
+            end
+
+        case "WEARING GLASSES"
+            if test $strike -gt 0 -o $first_run -eq 1
+                notify-send -a "glasses-check" -t 4000 \
+                    "Glasses on!" "Good to go."
+            end
+            set strike 0
+
+        case "NO FACE DETECTED"
+            # Ignored — no alert, streak paused (you're away from desk)
+            true
+    end
+
+    set first_run 0
+    sleep $INTERVAL
+end

@@ -1,0 +1,9 @@
+#!/usr/bin/env fish
+# Critical glasses alert — fullscreen image overlay via mpv
+# Called by glasses-watch when no-glasses streak hits critical level
+
+set src (dirname (readlink -f (status filename)))/songlasses.png
+
+mpv --fullscreen --no-audio --image-display-duration=inf \
+    --input-default-bindings=yes \
+    $src

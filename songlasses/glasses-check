@@ -1,0 +1,126 @@
+#!/usr/bin/env python3
+"""
+glasses-check: Snap a webcam frame, ask Claude Haiku if you're wearing glasses.
+Deps: ffmpeg, anthropic (pip install anthropic), ANTHROPIC_API_KEY in env.
+"""
+
+import base64
+import os
+import subprocess
+import sys
+import tempfile
+
+CAMERA   = "/dev/video0"
+API_URL  = "https://api.groq.com/openai/v1"
+MODEL    = "meta-llama/llama-4-scout-17b-16e-instruct"
+
+
+def capture_frame(path):
+    result = subprocess.run(
+        ["ffmpeg", "-y", "-loglevel", "error",
+         "-f", "v4l2", "-i", CAMERA,
+         "-vframes", "1", "-q:v", "5", path],
+        capture_output=True,
+    )
+    if result.returncode != 0:
+        print("camera error:", result.stderr.decode().strip(), file=sys.stderr)
+        sys.exit(1)
+
+
+def get_api_key():
+    key = os.environ.get("GROQ_API_KEY")
+    if key:
+        return key
+    keyfile = os.path.expanduser("~/.groq_key")
+    if os.path.exists(keyfile):
+        return open(keyfile).read().strip()
+    print(
+        "Error: GROQ_API_KEY not set.\n"
+        "Either:\n"
+        "  1. Add  set -x GROQ_API_KEY gsk_...  to ~/.config/fish/config.fish\n"
+        "  2. Or:  echo 'gsk_...' > ~/.groq_key && chmod 600 ~/.groq_key",
+        file=sys.stderr,
+    )
+    sys.exit(1)
+
+
+def ask_groq(image_path):
+    import urllib.request, json
+
+    with open(image_path, "rb") as f:
+        data = base64.standard_b64encode(f.read()).decode()
+
+    payload = json.dumps({
+        "model": MODEL,
+        "max_tokens": 60,
+        "messages": [{
+            "role": "user",
+            "content": [
+                {"type": "image_url",
+                 "image_url": {"url": f"data:image/jpeg;base64,{data}"}},
+                {"type": "text",
+                 "text": (
+                     "Look at the person's face. "
+                     "Are they wearing glasses (spectacles/eyeglasses)? "
+                     "Reply with exactly one of:\n"
+                     "  WEARING GLASSES\n"
+                     "  NO GLASSES\n"
+                     "  NO FACE DETECTED\n"
+                     "Nothing else."
+                 )},
+            ],
+        }],
+    }).encode()
+
+    req = urllib.request.Request(
+        f"{API_URL}/chat/completions",
+        data=payload,
+        headers={
+            "Authorization": f"Bearer {get_api_key()}",
+            "Content-Type": "application/json",
+            "User-Agent": "glasses-check/1.0",
+        },
+    )
+    try:
+        with urllib.request.urlopen(req) as resp:
+            result = json.loads(resp.read())
+    except urllib.error.HTTPError as e:
+        body = e.read().decode()
+        print(f"API error {e.code}: {body}", file=sys.stderr)
+        sys.exit(1)
+    return result["choices"][0]["message"]["content"].strip()
+
+
+def notify(title, body):
+    subprocess.run(["notify-send", "-a", "glasses-check", "-t", "5000", title, body],
+                   capture_output=True)
+
+
+def main():
+    quiet = "--quiet" in sys.argv or "-q" in sys.argv
+
+    with tempfile.NamedTemporaryFile(suffix=".jpg", delete=False) as tmp:
+        path = tmp.name
+
+    try:
+        capture_frame(path)
+        result = ask_groq(path)
+    finally:
+        os.unlink(path)
+
+    icons = {
+        "WEARING GLASSES": ("✅", "You're wearing glasses — all good!"),
+        "NO GLASSES":      ("👓", "Heads up — you forgot your glasses!"),
+        "NO FACE DETECTED": ("❓", "No face detected in frame."),
+    }
+
+    icon, msg = icons.get(result, ("❓", result))
+    print(f"{icon}  {msg}")
+    # print raw status on second line so scripts can parse it
+    print(result)
+    if not quiet:
+        notify("Glasses Check", msg)
+
+
+if __name__ == "__main__":
+    main()

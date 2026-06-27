@@ -1,0 +1,840 @@
+{
+  "timestamp": "2026-06-15T00:09:32.840303",
+  "moves": [
+    {
+      "src": "/home/sani/exam_map.pdf",
+      "dst": "/home/sani/Documents/exam_map.pdf",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/PassportSize.png",
+      "dst": "/home/sani/Media/Images/PassportSize.png",
+      "cat": "images"
+    },
+    {
+      "src": "/home/sani/error.jpeg",
+      "dst": "/home/sani/Media/Images/error.jpeg",
+      "cat": "images"
+    },
+    {
+      "src": "/home/sani/22i-1138_22i-2371_B_A3.pptx",
+      "dst": "/home/sani/Academic/22i-1138_22i-2371_B_A3.pptx",
+      "cat": "academic"
+    },
+    {
+      "src": "/home/sani/sda_rescue.log",
+      "dst": "/home/sani/Logs/sda_rescue.log",
+      "cat": "logs"
+    },
+    {
+      "src": "/home/sani/WhatsApp Video 2026-02-20 at 12.55.48 AM.mp4",
+      "dst": "/home/sani/Media/WhatsApp/Videos/WhatsApp Video 2026-02-20 at 12.55.48 AM.mp4",
+      "cat": "whatsapp_videos"
+    },
+    {
+      "src": "/home/sani/texput.log",
+      "dst": "/home/sani/Logs/texput.log",
+      "cat": "logs"
+    },
+    {
+      "src": "/home/sani/22i2365-MuhammadUmer-D.ipynb",
+      "dst": "/home/sani/Notebooks/22i2365-MuhammadUmer-D.ipynb",
+      "cat": "notebooks"
+    },
+    {
+      "src": "/home/sani/Offerletter og.pdf",
+      "dst": "/home/sani/Documents/Offerletter og.pdf",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Bank_Account.jpeg",
+      "dst": "/home/sani/Media/Images/Bank_Account.jpeg",
+      "cat": "images"
+    },
+    {
+      "src": "/home/sani/weedandcrop.jpeg",
+      "dst": "/home/sani/Media/Images/weedandcrop.jpeg",
+      "cat": "images"
+    },
+    {
+      "src": "/home/sani/WhatsApp Unknown 2026-05-28 at 4.43.49 AM.zip",
+      "dst": "/home/sani/Media/WhatsApp/Files/WhatsApp Unknown 2026-05-28 at 4.43.49 AM.zip",
+      "cat": "whatsapp_files"
+    },
+    {
+      "src": "/home/sani/Simulator.sh",
+      "dst": "/home/sani/Scripts/Simulator.sh",
+      "cat": "scripts"
+    },
+    {
+      "src": "/home/sani/bt-dual-audio.sh",
+      "dst": "/home/sani/Scripts/bt-dual-audio.sh",
+      "cat": "scripts"
+    },
+    {
+      "src": "/home/sani/mobile app.mp4",
+      "dst": "/home/sani/Media/Videos/mobile app.mp4",
+      "cat": "videos"
+    },
+    {
+      "src": "/home/sani/snapshot_2960.jpg",
+      "dst": "/home/sani/Media/Images/snapshot_2960.jpg",
+      "cat": "images"
+    },
+    {
+      "src": "/home/sani/WhatsApp Image 2026-04-18 at 5.34.11 AM.jpeg",
+      "dst": "/home/sani/Media/WhatsApp/Images/WhatsApp Image 2026-04-18 at 5.34.11 AM.jpeg",
+      "cat": "whatsapp_images"
+    },
+    {
+      "src": "/home/sani/1775956153973.png",
+      "dst": "/home/sani/Media/Images/1775956153973.png",
+      "cat": "images"
+    },
+    {
+      "src": "/home/sani/sda_rescue.log.bak",
+      "dst": "/home/sani/Logs/sda_rescue.log.bak",
+      "cat": "logs"
+    },
+    {
+      "src": "/home/sani/TransparantrsAyahsKafran2.pdf.png",
+      "dst": "/home/sani/Media/Images/TransparantrsAyahsKafran2.pdf.png",
+      "cat": "images"
+    },
+    {
+      "src": "/home/sani/yolov8n.pt",
+      "dst": "/home/sani/Models/yolov8n.pt",
+      "cat": "ml_models"
+    },
+    {
+      "src": "/home/sani/IMG_20260418_051040.jpg.jpeg",
+      "dst": "/home/sani/Media/Images/IMG_20260418_051040.jpg.jpeg",
+      "cat": "images"
+    },
+    {
+      "src": "/home/sani/1776001014740.png",
+      "dst": "/home/sani/Media/Images/1776001014740.png",
+      "cat": "images"
+    },
+    {
+      "src": "/home/sani/avatar.jpg",
+      "dst": "/home/sani/Media/Images/avatar.jpg",
+      "cat": "images"
+    },
+    {
+      "src": "/home/sani/install.sh",
+      "dst": "/home/sani/Scripts/install.sh",
+      "cat": "scripts"
+    },
+    {
+      "src": "/home/sani/C_22I-2346_Abdullah Sajid.zip",
+      "dst": "/home/sani/Academic/C_22I-2346_Abdullah Sajid.zip",
+      "cat": "academic"
+    },
+    {
+      "src": "/home/sani/CNIC_Back.jpeg",
+      "dst": "/home/sani/Media/Images/CNIC_Back.jpeg",
+      "cat": "images"
+    },
+    {
+      "src": "/home/sani/WhatsApp Unknown 2026-03-14 at 4.15.59 PM.zip",
+      "dst": "/home/sani/Media/WhatsApp/Files/WhatsApp Unknown 2026-03-14 at 4.15.59 PM.zip",
+      "cat": "whatsapp_files"
+    },
+    {
+      "src": "/home/sani/WhatsApp Image 2026-03-18 at 5.42.45 PM.jpeg",
+      "dst": "/home/sani/Media/WhatsApp/Images/WhatsApp Image 2026-03-18 at 5.42.45 PM.jpeg",
+      "cat": "whatsapp_images"
+    },
+    {
+      "src": "/home/sani/WhatsApp Image 2026-03-08 at 10.04.50 PM.jpeg",
+      "dst": "/home/sani/Media/WhatsApp/Images/WhatsApp Image 2026-03-08 at 10.04.50 PM.jpeg",
+      "cat": "whatsapp_images"
+    },
+    {
+      "src": "/home/sani/IMG_20260418_051034.jpg.jpeg",
+      "dst": "/home/sani/Media/Images/IMG_20260418_051034.jpg.jpeg",
+      "cat": "images"
+    },
+    {
+      "src": "/home/sani/4.zip",
+      "dst": "/home/sani/Archives/4.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/WhatsApp Video 2026-04-02 at 5.21.19 AM.mp4",
+      "dst": "/home/sani/Media/WhatsApp/Videos/WhatsApp Video 2026-04-02 at 5.21.19 AM.mp4",
+      "cat": "whatsapp_videos"
+    },
+    {
+      "src": "/home/sani/Transcript.jpeg",
+      "dst": "/home/sani/Media/Images/Transcript.jpeg",
+      "cat": "images"
+    },
+    {
+      "src": "/home/sani/WhatsApp Image 2026-04-12 at 6.01.31 PM.jpeg",
+      "dst": "/home/sani/Media/WhatsApp/Images/WhatsApp Image 2026-04-12 at 6.01.31 PM.jpeg",
+      "cat": "whatsapp_images"
+    },
+    {
+      "src": "/home/sani/1776001011530.png",
+      "dst": "/home/sani/Media/Images/1776001011530.png",
+      "cat": "images"
+    },
+    {
+      "src": "/home/sani/yolo.pt",
+      "dst": "/home/sani/Models/yolo.pt",
+      "cat": "ml_models"
+    },
+    {
+      "src": "/home/sani/best.pt",
+      "dst": "/home/sani/Models/best.pt",
+      "cat": "ml_models"
+    },
+    {
+      "src": "/home/sani/ACFrOgBd6Dt-Ujjp-sOvJ74i329LpIJP5bKDlBlT7m8mX8PGxH5oyVy07C_ok3HT26TGGI0VCldt1WmODP93rGI8bM9f2qZxbZyBKCYyK85-k9RqtlsxU0i-jRUWgCHcou_4GIRy-qAbceuIrJHpJI0Rgywor6R92dMkwBPXNw==.pdf",
+      "dst": "/home/sani/Documents/ACFrOgBd6Dt-Ujjp-sOvJ74i329LpIJP5bKDlBlT7m8mX8PGxH5oyVy07C_ok3HT26TGGI0VCldt1WmODP93rGI8bM9f2qZxbZyBKCYyK85-k9RqtlsxU0i-jRUWgCHcou_4GIRy-qAbceuIrJHpJI0Rgywor6R92dMkwBPXNw==.pdf",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/WEED_DETECTION_V2.mp4",
+      "dst": "/home/sani/Media/Videos/WEED_DETECTION_V2.mp4",
+      "cat": "videos"
+    },
+    {
+      "src": "/home/sani/water_management.pdf",
+      "dst": "/home/sani/Documents/water_management.pdf",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/CNIC_Front.jpeg",
+      "dst": "/home/sani/Media/Images/CNIC_Front.jpeg",
+      "cat": "images"
+    },
+    {
+      "src": "/home/sani/Usman cv.pdf",
+      "dst": "/home/sani/Documents/Usman cv.pdf",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/WhatsApp Video 2026-03-31 at 5.24.33 PM.mp4",
+      "dst": "/home/sani/Media/WhatsApp/Videos/WhatsApp Video 2026-03-31 at 5.24.33 PM.mp4",
+      "cat": "whatsapp_videos"
+    },
+    {
+      "src": "/home/sani/test2.jpeg",
+      "dst": "/home/sani/Media/Images/test2.jpeg",
+      "cat": "images"
+    },
+    {
+      "src": "/home/sani/PXL.RAW-01.COVER_exported_169_1762347661919~2.jpg.jpeg",
+      "dst": "/home/sani/Media/Images/PXL.RAW-01.COVER_exported_169_1762347661919~2.jpg.jpeg",
+      "cat": "images"
+    },
+    {
+      "src": "/home/sani/test.wav",
+      "dst": "/home/sani/Media/Audio/test.wav",
+      "cat": "audio"
+    },
+    {
+      "src": "/home/sani/flatpak-list.txt",
+      "dst": "/home/sani/Documents/flatpak-list.txt",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/app.json",
+      "dst": "/home/sani/Dev/app.json",
+      "cat": "dev"
+    },
+    {
+      "src": "/home/sani/fix_photo_dates.py",
+      "dst": "/home/sani/Dev/fix_photo_dates.py",
+      "cat": "dev"
+    },
+    {
+      "src": "/home/sani/sda_first100mb.img",
+      "dst": "/home/sani/Archives/sda_first100mb.img",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/skills-lock.json",
+      "dst": "/home/sani/Dev/skills-lock.json",
+      "cat": "dev"
+    },
+    {
+      "src": "/home/sani/Downloads/2724-11th Class Mathematics FBISE New Text Book PDF-(taleem360.com).pdf",
+      "dst": "/home/sani/Documents/2724-11th Class Mathematics FBISE New Text Book PDF-(taleem360.com).pdf",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/6e48z1kc7r40-bugatti.zip",
+      "dst": "/home/sani/Archives/6e48z1kc7r40-bugatti.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "dst": "/home/sani/Dev/83afe278b6a6bb3c-s.p.3a6ba036.woff2",
+      "cat": "dev"
+    },
+    {
+      "src": "/home/sani/Downloads/_igetintopc.com_Adobe_Illustrator_2026_x64.rar",
+      "dst": "/home/sani/Archives/_igetintopc.com_Adobe_Illustrator_2026_x64.rar",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/Adobe Photoshop 2026 (v27.3.1.4) Multilingual [FileCR].zip",
+      "dst": "/home/sani/Archives/Adobe Photoshop 2026 (v27.3.1.4) Multilingual [FileCR].zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/Adobe_Photoshop_2025.p0PbMxJg.rar.part",
+      "dst": "/home/sani/Logs/Adobe_Photoshop_2025.p0PbMxJg.rar.part",
+      "cat": "logs"
+    },
+    {
+      "src": "/home/sani/Downloads/Adobe_Photoshop_2025.rar",
+      "dst": "/home/sani/Archives/Adobe_Photoshop_2025.rar",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/analytics_recognitions_2026-04-03.csv",
+      "dst": "/home/sani/Documents/analytics_recognitions_2026-04-03.csv",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/analytics_recognitions_2026-04-06.csv",
+      "dst": "/home/sani/Documents/analytics_recognitions_2026-04-06.csv",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/archive.zip",
+      "dst": "/home/sani/Archives/archive.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/art.gif",
+      "dst": "/home/sani/Media/art.gif",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/bayesian_regression_activity.ipynb",
+      "dst": "/home/sani/Dev/bayesian_regression_activity.ipynb",
+      "cat": "dev"
+    },
+    {
+      "src": "/home/sani/Downloads/bbro_bbro_07_05_2021_v_0_0.png(1).zip",
+      "dst": "/home/sani/Archives/bbro_bbro_07_05_2021_v_0_0.png(1).zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/bbro_bbro_07_05_2021_v_0_0.png(2).zip",
+      "dst": "/home/sani/Archives/bbro_bbro_07_05_2021_v_0_0.png(2).zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/bbro_bbro_07_05_2021_v_0_0.png.zip",
+      "dst": "/home/sani/Archives/bbro_bbro_07_05_2021_v_0_0.png.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/boot.img",
+      "dst": "/home/sani/Archives/boot.img",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/cifar-10-python.tar.gz",
+      "dst": "/home/sani/Archives/cifar-10-python.tar.gz",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/cropandweed-dataset-main.zip",
+      "dst": "/home/sani/Archives/cropandweed-dataset-main.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/CV.pdf",
+      "dst": "/home/sani/Documents/CV.pdf",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/div-coding-icon.png",
+      "dst": "/home/sani/Media/div-coding-icon.png",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/dtbo.img",
+      "dst": "/home/sani/Archives/dtbo.img",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/easyeda-linux-x64-6.5.51.zip",
+      "dst": "/home/sani/Archives/easyeda-linux-x64-6.5.51.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/edgevision_feature_specs.html",
+      "dst": "/home/sani/Dev/edgevision_feature_specs.html",
+      "cat": "dev"
+    },
+    {
+      "src": "/home/sani/Downloads/edgevision_mobile-Debug.zip",
+      "dst": "/home/sani/Archives/edgevision_mobile-Debug.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/edgevisionai-ee148-firebase-adminsdk-fbsvc-54fb30e9d8.json",
+      "dst": "/home/sani/Dev/edgevisionai-ee148-firebase-adminsdk-fbsvc-54fb30e9d8.json",
+      "cat": "dev"
+    },
+    {
+      "src": "/home/sani/Downloads/EICFG.zip",
+      "dst": "/home/sani/Archives/EICFG.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/Flashpoint Infinity 14.0.3.7z",
+      "dst": "/home/sani/Archives/Flashpoint Infinity 14.0.3.7z",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/FlashpointInstaller.exe",
+      "dst": "/home/sani/Archives/FlashpointInstaller.exe",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/fp14.0.3_lin_20251201.7z",
+      "dst": "/home/sani/Archives/fp14.0.3_lin_20251201.7z",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/FreeSample-Vectorizer-io-WhatsApp Image 2026-04-12 at 6.01.31 PM.svg",
+      "dst": "/home/sani/Media/FreeSample-Vectorizer-io-WhatsApp Image 2026-04-12 at 6.01.31 PM.svg",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/Gemini_Generated_Image_ge55wzge55wzge55.png",
+      "dst": "/home/sani/Media/Gemini_Generated_Image_ge55wzge55wzge55.png",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/Gemini_Generated_Image_gzkz2sgzkz2sgzkz-clean.png",
+      "dst": "/home/sani/Media/Gemini_Generated_Image_gzkz2sgzkz2sgzkz-clean.png",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/Gemini_Generated_Image_gzkz2sgzkz2sgzkz.png",
+      "dst": "/home/sani/Media/Gemini_Generated_Image_gzkz2sgzkz2sgzkz.png",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/Gemini_Generated_Image_q7l33tq7l33tq7l3.png",
+      "dst": "/home/sani/Media/Gemini_Generated_Image_q7l33tq7l33tq7l3.png",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/Gemini_Generated_Image_xwulsvxwulsvxwul-clean.png",
+      "dst": "/home/sani/Media/Gemini_Generated_Image_xwulsvxwulsvxwul-clean.png",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/Gemini_Generated_Image_xwulsvxwulsvxwul.png",
+      "dst": "/home/sani/Media/Gemini_Generated_Image_xwulsvxwulsvxwul.png",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/Gemini_Generated_Image_ysld0rysld0rysld.png",
+      "dst": "/home/sani/Media/Gemini_Generated_Image_ysld0rysld0rysld.png",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/git-version-control.skill",
+      "dst": "/home/sani/Dev/git-version-control.skill",
+      "cat": "dev"
+    },
+    {
+      "src": "/home/sani/Downloads/google-services(1).json",
+      "dst": "/home/sani/Dev/google-services(1).json",
+      "cat": "dev"
+    },
+    {
+      "src": "/home/sani/Downloads/google-services(2).json",
+      "dst": "/home/sani/Dev/google-services(2).json",
+      "cat": "dev"
+    },
+    {
+      "src": "/home/sani/Downloads/google-services(3).json",
+      "dst": "/home/sani/Dev/google-services(3).json",
+      "cat": "dev"
+    },
+    {
+      "src": "/home/sani/Downloads/google-services.json",
+      "dst": "/home/sani/Dev/google-services.json",
+      "cat": "dev"
+    },
+    {
+      "src": "/home/sani/Downloads/GoogleService-Info.plist",
+      "dst": "/home/sani/Dev/GoogleService-Info.plist",
+      "cat": "dev"
+    },
+    {
+      "src": "/home/sani/Downloads/hunyuan_3d_v2.1.safetensors",
+      "dst": "/home/sani/Models/hunyuan_3d_v2.1.safetensors",
+      "cat": "models"
+    },
+    {
+      "src": "/home/sani/Downloads/i222365.ipynb",
+      "dst": "/home/sani/Dev/i222365.ipynb",
+      "cat": "dev"
+    },
+    {
+      "src": "/home/sani/Downloads/IMG_20260515_093606.jpg",
+      "dst": "/home/sani/Media/IMG_20260515_093606.jpg",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/IMG_20260515_093618.jpg",
+      "dst": "/home/sani/Media/IMG_20260515_093618.jpg",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/kling_20260512_VIDEO_____Top_do_1005_0.mp4",
+      "dst": "/home/sani/Media/kling_20260512_VIDEO_____Top_do_1005_0.mp4",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/kling_20260515_VIDEO_Image1_Ima_3488_0 (1).mp4",
+      "dst": "/home/sani/Media/kling_20260515_VIDEO_Image1_Ima_3488_0 (1).mp4",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/kling_20260515_VIDEO_Image1_Ima_3488_0.mp4",
+      "dst": "/home/sani/Media/kling_20260515_VIDEO_Image1_Ima_3488_0.mp4",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/kling_20260515_VIDEO_IMAGE_1__s_3622_0 (1).mp4",
+      "dst": "/home/sani/Media/kling_20260515_VIDEO_IMAGE_1__s_3622_0 (1).mp4",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/kling_20260515_VIDEO_IMAGE_1__s_3622_0.mp4",
+      "dst": "/home/sani/Media/kling_20260515_VIDEO_IMAGE_1__s_3622_0.mp4",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/Laptop_Webcam_2026-05-22T17-40-15.png",
+      "dst": "/home/sani/Media/Laptop_Webcam_2026-05-22T17-40-15.png",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/Lecture 14 Multi Logistic Regression.pptx",
+      "dst": "/home/sani/Documents/Lecture 14 Multi Logistic Regression.pptx",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/lineage-23.2-20260319-nightly-sunfish-signed.zip",
+      "dst": "/home/sani/Archives/lineage-23.2-20260319-nightly-sunfish-signed.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/logo.png",
+      "dst": "/home/sani/Media/logo.png",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/mathsbook1-4-7.pdf",
+      "dst": "/home/sani/Documents/mathsbook1-4-7.pdf",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/mathsbook1.pdf",
+      "dst": "/home/sani/Documents/mathsbook1.pdf",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/Meshy_AI_Mobile_Electronics_Wo_0412135519_texture_obj.zip",
+      "dst": "/home/sani/Archives/Meshy_AI_Mobile_Electronics_Wo_0412135519_texture_obj.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/mixkit-correct-answer-tone-2870.wav",
+      "dst": "/home/sani/Media/mixkit-correct-answer-tone-2870.wav",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/Mobile App (12-3).pdf",
+      "dst": "/home/sani/Documents/Mobile App (12-3).pdf",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/Ops_Room_2026-05-22T16-43-05.png",
+      "dst": "/home/sani/Media/Ops_Room_2026-05-22T16-43-05.png",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/output-onlinejpgtools.png",
+      "dst": "/home/sani/Media/output-onlinejpgtools.png",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/q79jtkiia3gg-box.zip",
+      "dst": "/home/sani/Archives/q79jtkiia3gg-box.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/quiz_variation_A-1.pdf",
+      "dst": "/home/sani/Documents/quiz_variation_A-1.pdf",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/quiz_variation_A.docx",
+      "dst": "/home/sani/Documents/quiz_variation_A.docx",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/quiz_variation_A.pdf",
+      "dst": "/home/sani/Documents/quiz_variation_A.pdf",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/quiz_variation_B-1.pdf",
+      "dst": "/home/sani/Documents/quiz_variation_B-1.pdf",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/quiz_variation_B.docx",
+      "dst": "/home/sani/Documents/quiz_variation_B.docx",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/quiz_variation_B.pdf",
+      "dst": "/home/sani/Documents/quiz_variation_B.pdf",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/README-EN.txt",
+      "dst": "/home/sani/Documents/README-EN.txt",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/README-RUS.txt",
+      "dst": "/home/sani/Documents/README-RUS.txt",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/Real-Time-IoT-Water-Monitoring-Platform.pdf",
+      "dst": "/home/sani/Documents/Real-Time-IoT-Water-Monitoring-Platform.pdf",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/Real-Time-IoT-Water-Monitoring-Platform.pptx",
+      "dst": "/home/sani/Documents/Real-Time-IoT-Water-Monitoring-Platform.pptx",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/Resume.pdf",
+      "dst": "/home/sani/Documents/Resume.pdf",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/robot_svr_solution.py",
+      "dst": "/home/sani/Dev/robot_svr_solution.py",
+      "cat": "dev"
+    },
+    {
+      "src": "/home/sani/Downloads/Screenshot_20260515-093234_Gallery.png",
+      "dst": "/home/sani/Media/Screenshot_20260515-093234_Gallery.png",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/ShuttleBot_Presentation.pptx",
+      "dst": "/home/sani/Documents/ShuttleBot_Presentation.pptx",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/Shuttlecock detecter.v1i.yolov8.zip",
+      "dst": "/home/sani/Archives/Shuttlecock detecter.v1i.yolov8.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/Supabase Snippet Dress Variant Colors(1).csv",
+      "dst": "/home/sani/Documents/Supabase Snippet Dress Variant Colors(1).csv",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/Supabase Snippet Dress Variant Colors.csv",
+      "dst": "/home/sani/Documents/Supabase Snippet Dress Variant Colors.csv",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/Supabase Snippet Image Reordering by Priority Color(1).csv",
+      "dst": "/home/sani/Documents/Supabase Snippet Image Reordering by Priority Color(1).csv",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/Supabase Snippet Image Reordering by Priority Color.csv",
+      "dst": "/home/sani/Documents/Supabase Snippet Image Reordering by Priority Color.csv",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/super_empty.img",
+      "dst": "/home/sani/Archives/super_empty.img",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/takeout-20260613T114346Z-3-001.zip",
+      "dst": "/home/sani/Archives/takeout-20260613T114346Z-3-001.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/takeout-20260613T114346Z-3-002.zip",
+      "dst": "/home/sani/Archives/takeout-20260613T114346Z-3-002.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/takeout-20260613T114346Z-3-003.zip",
+      "dst": "/home/sani/Archives/takeout-20260613T114346Z-3-003.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/takeout-20260613T114346Z-3-004.zip",
+      "dst": "/home/sani/Archives/takeout-20260613T114346Z-3-004.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/takeout-20260613T114346Z-3-005.zip",
+      "dst": "/home/sani/Archives/takeout-20260613T114346Z-3-005.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/takeout-20260613T114346Z-3-006.zip",
+      "dst": "/home/sani/Archives/takeout-20260613T114346Z-3-006.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/takeout-20260613T114346Z-3-007.zip",
+      "dst": "/home/sani/Archives/takeout-20260613T114346Z-3-007.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/takeout-20260613T114346Z-3-008.zip",
+      "dst": "/home/sani/Archives/takeout-20260613T114346Z-3-008.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/takeout-20260613T114346Z-3-009.zip",
+      "dst": "/home/sani/Archives/takeout-20260613T114346Z-3-009.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/takeout-20260613T114346Z-3-010.zip",
+      "dst": "/home/sani/Archives/takeout-20260613T114346Z-3-010.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/test.zip",
+      "dst": "/home/sani/Archives/test.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/testdata1.xlsx",
+      "dst": "/home/sani/Documents/testdata1.xlsx",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/The_Ethics_Blueprint.pdf",
+      "dst": "/home/sani/Documents/The_Ethics_Blueprint.pdf",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/Title_of_the_Project_here__1_ (1).pdf",
+      "dst": "/home/sani/Documents/Title_of_the_Project_here__1_ (1).pdf",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/tlauncher-linux-installer-1.0-1-any.pkg.tar.zst",
+      "dst": "/home/sani/Archives/tlauncher-linux-installer-1.0-1-any.pkg.tar.zst",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/tlauncher-linux-installer.deb",
+      "dst": "/home/sani/Archives/tlauncher-linux-installer.deb",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/TLauncher.jar",
+      "dst": "/home/sani/Archives/TLauncher.jar",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/train.zip",
+      "dst": "/home/sani/Archives/train.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/traindata1.xlsx",
+      "dst": "/home/sani/Documents/traindata1.xlsx",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/udi8ufaamsmb1.mp4",
+      "dst": "/home/sani/Media/udi8ufaamsmb1.mp4",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/Untitled(1).png",
+      "dst": "/home/sani/Media/Untitled(1).png",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/Usman_Majid_CV.pdf",
+      "dst": "/home/sani/Documents/Usman_Majid_CV.pdf",
+      "cat": "documents"
+    },
+    {
+      "src": "/home/sani/Downloads/usman_portfolio.html",
+      "dst": "/home/sani/Dev/usman_portfolio.html",
+      "cat": "dev"
+    },
+    {
+      "src": "/home/sani/Downloads/vbmeta.img",
+      "dst": "/home/sani/Archives/vbmeta.img",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/WE3DS.dp5wbqIh.zip.part",
+      "dst": "/home/sani/Logs/WE3DS.dp5wbqIh.zip.part",
+      "cat": "logs"
+    },
+    {
+      "src": "/home/sani/Downloads/WE3DS.zip",
+      "dst": "/home/sani/Archives/WE3DS.zip",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/weedandcrop.jpeg",
+      "dst": "/home/sani/Media/weedandcrop.jpeg",
+      "cat": "media"
+    },
+    {
+      "src": "/home/sani/Downloads/weedx-f503c-firebase-adminsdk-fbsvc-42c0c2f950.json",
+      "dst": "/home/sani/Dev/weedx-f503c-firebase-adminsdk-fbsvc-42c0c2f950.json",
+      "cat": "dev"
+    },
+    {
+      "src": "/home/sani/Downloads/Win10_22H2_English_x64v1.iso",
+      "dst": "/home/sani/Archives/Win10_22H2_English_x64v1.iso",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/Win11_25H2_English_x64_v2.iso",
+      "dst": "/home/sani/Archives/Win11_25H2_English_x64_v2.iso",
+      "cat": "archives"
+    },
+    {
+      "src": "/home/sani/Downloads/yolo26n.pt",
+      "dst": "/home/sani/Models/yolo26n.pt",
+      "cat": "models"
+    }
+  ]
+}

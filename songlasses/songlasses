@@ -1,0 +1,7 @@
+#!/usr/bin/env fish
+# cheat code: tells glasses-watch to back off for one cycle
+
+touch /tmp/glasses-cheat
+mpv --fullscreen --no-audio --image-display-duration=3 \
+    --input-default-bindings=yes \
+    (dirname (readlink -f (status filename)))/no-glasses.png 2>/dev/null
