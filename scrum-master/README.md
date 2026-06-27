@@ -93,3 +93,9 @@ Files
 License
 -------
 Small internal helper — adapt as needed.
+
+
+## Memento Mori
+```
+sudo ln -sf /home/sani/c0d3/Utility-Scripts/scrum-master/scrum_master.py /usr/local/bin/slack_committer 
+```
